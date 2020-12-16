@@ -50,7 +50,7 @@ default:
 ###################### Begin Windows Build + Test
 windows job:
     tags:
-    - Windows
+    - Windows-x86_64
     stage: all
     script: 
     - *scriptCommon
@@ -75,7 +75,7 @@ windows job:
 ###################### Begin Linux
 linux job:
     tags:
-    - Linux
+    - Linux-x86_64
     stage: all
     script: 
     - *scriptCommon
@@ -114,7 +114,7 @@ linux job:
 ###################### Begin macOS Build + Test
 macos job:
     tags:
-    - macOS
+    - macOS_X-x86_64
     stage: all
     script:
     - | 
