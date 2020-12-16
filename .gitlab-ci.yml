@@ -126,8 +126,15 @@ macos job:
     - export PATH="/usr/local/opt/gcc/bin:${PATH}"
     - go env -w GO111MODULE=on
     - go env -w GOPROXY="https://goproxy.io,https://proxy.golang.org,direct"
+    - export PRIVPATH=$(mktemp -d "${HOME:?}/.XXXXXXXXXXXXXXXX")
+    - export NEW_GOPATH=$(mktemp -d "${PRIVPATH:?}/XXXXXXXXXXXXXXXX")
+    - export NEW_GOCACHE=$(mktemp -d "${PRIVPATH:?}/XXXXXXXXXXXXXXXX")
+    - export NEW_GOMODCACHE=$(mktemp -d "${PRIVPATH:?}/XXXXXXXXXXXXXXXX")
+    - go env -w GOPATH="${NEW_GOPATH:?}"
+    - go env -w GOCACHE="${NEW_GOCACHE:?}"
+    - go env -w GOMODCACHE="${NEW_GOMODCACHE:?}"
     - *scriptGoVersion
-    - go clean -modcache -cache -r
+    - go clean -testcache -modcache -cache -r
     - go mod download
     - go mod verify
     - *scriptGitPre
@@ -136,5 +143,10 @@ macos job:
         # status
         echo "Build completed successfully - running tests; coverage and race detector enabled"
         echo "TODO: Use 'cov_report.sh'"
-    - CGO_ENABLED=1 go test -v -cover -covermode=atomic -race -tags="osnetgo,osusergo,leaktest,purego" -count=1 -cpu=1 -bench=. -parallel=1 $(go list ./... | grep -v test | sort | uniq)
+    - CGO_ENABLED=1 go test -v -a -cover -covermode=atomic -race -tags="osnetgo,osusergo,leaktest,purego" -count=1 -cpu=1 -bench=. -parallel=1 $(go list ./... | grep -v test | sort | uniq)
+    - | 
+        # cleanup
+    - chmod -R u+rwx "${GOPATH:?}"/* 2>/dev/null && rm -rf -- "${GOPATH:?}"/* 2>/dev/null || true :;
+    - chmod -R u+rwx "${GOCACHE:?}"/* 2>/dev/null && rm -rf -- "${GOCACHE:?}"/* 2>/dev/null || true :;
+    - chmod -R u+rwx "${GOMODCACHE:?}"/* 2>/dev/null && rm -rf -- "${GOMODCACHE:?}"/* 2>/dev/null || true :;
 ###################### End macOS Build + Test
