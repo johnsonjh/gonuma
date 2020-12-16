@@ -129,9 +129,9 @@ macos job:
     - export NEW_GOPATH=$(mktemp -d "${PRIVPATH:?}/XXXXXXXXXXXXXXXX")
     - export NEW_GOCACHE=$(mktemp -d "${PRIVPATH:?}/XXXXXXXXXXXXXXXX")
     - export NEW_GOMODCACHE=$(mktemp -d "${PRIVPATH:?}/XXXXXXXXXXXXXXXX")
-    - go env -w GOPATH="${NEW_GOPATH:?}" && export "${GOPATH:?}"
-    - go env -w GOCACHE="${NEW_GOCACHE:?}" && export "${GOCACHE:?}"
-    - go env -w GOMODCACHE="${NEW_GOMODCACHE:?}" && export "${GOMODCACHE:?}"
+    - export GOPATH="${NEW_GOPATH:?}" && go env -w GOPATH="${NEW_GOPATH:?}"
+    - export GOCACHE="${NEW_GOCACHE:?}" && go env -w GOCACHE="${NEW_GOCACHE:?}"
+    - export GOMODCACHE="${NEW_GOMODCACHE:?}" && go env -w GOMODCACHE="${NEW_GOMODCACHE:?}"
     - *scriptGoVersion
     - go clean -testcache -modcache -cache -r || true :;
     - go mod download
