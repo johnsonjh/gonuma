@@ -37,7 +37,7 @@
 ## License
 
 - [MIT License](https://tldrlegal.com/license/mit-license)
-- [![FOSSAAltStatus](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fjohnsonjh%2Fgonuma.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fjohnsonjh%2Fgonuma?ref=badge_large)
+- [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fjohnsonjh%2Fgonuma.svg?type=small)](https://app.fossa.com/projects/git%2Bgithub.com%2Fjohnsonjh%2Fgonuma?ref=badge_small)
 
 ## Usage
 
