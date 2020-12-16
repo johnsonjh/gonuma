@@ -86,7 +86,7 @@ linux job:
     - dnf upgrade --refresh -y || true :;
     - dnf groupinstall "Development Tools" -y || true :;
     - dnf install epel-release centos-release-scl centos-release-scl-rh -y || true :;
-    - dnf install zsh rpmconf scl-utils devtoolset-9 -y || true :;
+    - dnf install clang zsh rpmconf scl-utils devtoolset-9 -y || true :;
     - yes | rpmconf -a || true :;
     - . /opt/rh/devtoolset-9/enable
     - dnf clean all -y || true :;
@@ -96,10 +96,11 @@ linux job:
         bash --norc --noprofile --posix -o pipefail -c "set -e && mkdir -p /tools/gimme && GIMME_SILENT_ENV=1 GIMME_ENV_PREFIX=/tools/gimme/env GIMME_VERSION_PREFIX=/tools/gimme/ver GIMME_GO_VERSION=1.15.6 GIMME_CGO_ENABLED=1 /tools/bin/gimme" > /tools/genv && . /tools/genv || true :;
     - . /tools/genv
     - gcc --version
-    - go env -w GO111MODULE=on
-    - go env -w GOPROXY="https://goproxy.io,https://proxy.golang.org,direct"
+    - clang --version
+    - go env -w GO111MODULE=on && export "${GO111MODULE:?}"
+    - go env -w GOPROXY="https://goproxy.io,https://proxy.golang.org,direct" && export "${GOPROXY:?}"
     - *scriptGoVersion
-    - go clean -modcache -cache -r
+    - go clean -modcache -cache -r || true :;
     - go mod download
     - go mod verify
     - *scriptGitPre
@@ -122,19 +123,19 @@ macos job:
         bash --norc --noprofile --posix -c "brew  update >/dev/null 2>&1 || true :;" >/dev/null 2>&1 || true :;
         bash --norc --noprofile --posix -c "brew upgrade >/dev/null 2>&1 || true :;" >/dev/null 2>&1 || true :;
     - *scriptCommon
-    - if type brew >/dev/null 2>&1; then export HOMEBREW_PREFIX=$(brew --prefix 2>/dev/null); for dir in ${HOMEBREW_PREFIX}/opt/*/libexec/gnubin; do export PATH="${dir}:${PATH}"; done; fi
-    - export PATH="/usr/local/opt/gcc/bin:${PATH}"
-    - go env -w GO111MODULE=on
-    - go env -w GOPROXY="https://goproxy.io,https://proxy.golang.org,direct"
+    - if type brew >/dev/null 2>&1; then export HOMEBREW_PREFIX=$(brew --prefix 2>/dev/null); for dir in ${HOMEBREW_PREFIX:?}/opt/*/libexec/gnubin; do export PATH="${dir:?}:${PATH:?}"; done; fi
+    - export PATH="/usr/local/opt/gcc/bin:${PATH:?}"
+    - go env -w GO111MODULE=on && export "${GO111MODULE:?}"
+    - go env -w GOPROXY="https://goproxy.io,https://proxy.golang.org,direct" && export "${GOPROXY}"
     - export PRIVPATH=$(mktemp -d "${HOME:?}/.XXXXXXXXXXXXXXXX")
     - export NEW_GOPATH=$(mktemp -d "${PRIVPATH:?}/XXXXXXXXXXXXXXXX")
     - export NEW_GOCACHE=$(mktemp -d "${PRIVPATH:?}/XXXXXXXXXXXXXXXX")
     - export NEW_GOMODCACHE=$(mktemp -d "${PRIVPATH:?}/XXXXXXXXXXXXXXXX")
-    - go env -w GOPATH="${NEW_GOPATH:?}"
-    - go env -w GOCACHE="${NEW_GOCACHE:?}"
-    - go env -w GOMODCACHE="${NEW_GOMODCACHE:?}"
+    - go env -w GOPATH="${NEW_GOPATH:?}" && export "${GOPATH:?}"
+    - go env -w GOCACHE="${NEW_GOCACHE:?}" && export "${GOCACHE:?}"
+    - go env -w GOMODCACHE="${NEW_GOMODCACHE:?}" && export "${GOMODCACHE:?}"
     - *scriptGoVersion
-    - go clean -testcache -modcache -cache -r
+    - go clean -testcache -modcache -cache -r || true :;
     - go mod download
     - go mod verify
     - *scriptGitPre
