@@ -34,6 +34,11 @@
 - [GoCov](https://pktdist.gridfinity.com/coverage/gonuma/)
 - [Coveralls](https://coveralls.io/github/johnsonjh/gonuma)
 
+## License
+
+- [MIT License](https://tldrlegal.com/license/mit-license)
+- [![FOSSAAltStatus](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fjohnsonjh%2Fgonuma.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fjohnsonjh%2Fgonuma?ref=badge_large)
+
 ## Usage
 
 ```go
@@ -55,8 +60,3 @@
     objects[cpu].X = xx
  }
 ```
-
-## License
-
-- [MIT License](https://tldrlegal.com/license/mit-license)
-  - [![FOSSAAltStatus](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fjohnsonjh%2Fgonuma.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fjohnsonjh%2Fgonuma?ref=badge_large)
