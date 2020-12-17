@@ -112,7 +112,7 @@ func TestMemPolicy(t *testing.T) {
 	// assert.NoError(gonuma.SetMemPolicy(gonuma.MPolDefault, nil)) // XXX(jhj: Test fails in Docker?
 }
 
-//func TestGetMemAllowedNodeMaskAndBind(t *testing.T) {
+// func TestGetMemAllowedNodeMaskAndBind(t *testing.T) {
 //	assert := require.New(t)
 //	mask, err := gonuma.GetMemAllowedNodeMask()
 //	if gonuma.NUMAavailable() {

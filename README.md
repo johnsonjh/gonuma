@@ -42,21 +42,21 @@
 ## Usage
 
 ```go
- package main
+package main
 
- import (
-    gonuma "github.com/johnsonjh/gonuma"
- )
+import (
+        gonuma "github.com/johnsonjh/gonuma"
+)
 
- type object struct {
-  X int
-    _ [...]byte // pad to page size
-  }
+type object struct {
+        X int
+        _ [...]byte // pad to page size
+}
 
- var objects = make([]object, gonuma.CPUCount())
+var objects = make([]object, gonuma.CPUCount())
 
- func fnxxxx() {
-    cpu, node := gonuma.GetCPUAndNode()
-    objects[cpu].X = xx
- }
+func fnxxxx() {
+        cpu, node := gonuma.GetCPUAndNode()
+        objects[cpu].X = xx
+}
 ```
