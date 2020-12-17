@@ -1,5 +1,7 @@
 #!/usr/bin/env sh
 
+# >> This script is not POSIX-compliant. <<
+
 # This script will use your default ${GOROOT}
 # and ${GOPATH}, so ensure these locations exist,
 # and "${GOPATH}/bin" is in your default ${PATH}.
