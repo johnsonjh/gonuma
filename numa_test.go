@@ -118,7 +118,7 @@ func TestMemPolicy(t *testing.T) {
 //	if gonuma.NUMAavailable() {
 // assert.NoError(err)
 // assert.True(mask.OnesCount() > 0)
-//assert.NoError(gonuma.Bind(mask))
+// assert.NoError(gonuma.Bind(mask))
 //	} else {
 //		assert.Equal(syscall.ENOSYS, err)
 //	}
