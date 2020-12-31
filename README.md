@@ -18,7 +18,15 @@
 
 ## Availability
 
+### Go Modules
+
+- [go.gridfinity.dev](https://go.gridfinity.dev/gonuma)
+- [go.gridfinity.com](https://go.gridfinity.com/)
+
+### Source Code
+
 - [Gridfinity GitLab](https://gitlab.gridfinity.com/jeff/go-numa)
+- [SourceHut](https://sr.ht/~trn/gonuma)
 - [GitHub](https://github.com/gridfinity/gonuma)
 
 ## Original Author
