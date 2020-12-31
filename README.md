@@ -29,17 +29,17 @@
 
 ### Source Code
 
-- [Gridfinity GitLab](https://gitlab.gridfinity.com/jeff/go-numa)
+- [Gridfinity GitLab](https://gitlab.gridfinity.com/go/gonuma)
 - [SourceHut](https://sr.ht/~trn/gonuma)
 - [GitHub](https://github.com/gridfinity/gonuma)
 
 ## Original Author
 
-- [lrita@163.com](https://github.com/lrita/numa)
+- [lrita](https://github.com/lrita/numa) \<[lrita@163.com](mailto:lrita@163.com)\>
 
 ## Security
 
-- [Security Policy](https://github.com/gridfinity/gonuma/blob/master/SECURITY.md)
+- [Security Policy and Vulnerability Reporting](https://github.com/gridfinity/gonuma/blob/master/SECURITY.md)
 
 ## Coverage Reports
 
