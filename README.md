@@ -1,5 +1,9 @@
 # gonuma
 
+`gonuma` is a Go utility library for writing NUMA-aware applications
+
+-------------------
+
 [![License](http://img.shields.io/badge/license-mit-blue.svg)](https://raw.githubusercontent.com/gridfinity/gonuma/master/LICENSE)
 [![GoVersion](https://img.shields.io/github/go-mod/go-version/gridfinity/gonuma.svg)](https://github.com/gridfinity/gonuma/blob/master/go.mod)
 [![PkgGoDev](https://pkg.go.dev/badge/github.com/gridfinity/gonuma)](https://pkg.go.dev/github.com/gridfinity/gonuma)
@@ -14,7 +18,7 @@
 [![DeepSource](https://deepsource.io/gh/gridfinity/gonuma.svg/?label=active+issues)](https://deepsource.io/gh/gridfinity/gonuma/?ref=repository-badge)
 [![FOSSAStatus](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fjohnsonjh%2Fgonuma.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%gridfinity%2Fgonuma?ref=badge_shield)
 
-`gonuma` is a Go utility library for writing NUMA-aware applications
+-------------------
 
 ## Availability
 
