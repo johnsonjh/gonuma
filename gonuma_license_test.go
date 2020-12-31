@@ -2,8 +2,6 @@
 // Copyright 2020 Gridfinity, LLC.
 // Copyright 2012 The Go Authors.
 // All rights reserved.
-// Use of this source code is governed by the BSD-style
-// license that can be found in the testutil/LICENSE file.
 
 package gonuma
 
@@ -11,14 +9,14 @@ import (
 	"fmt"
 	"testing"
 
-	u "github.com/johnsonjh/gonuma/testutil"
+	u "go.gridfinity.dev/leaktestfe"
 	licn "go4.org/legal"
 )
 
 func TestLicense(
 	t *testing.T,
 ) {
-	defer u.LeakVerifyNone(
+	defer u.Leakplug(
 		t,
 	)
 	licenses := licn.Licenses()
