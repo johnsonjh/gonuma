@@ -4,7 +4,7 @@
 
 - Only the most recent current release is **_SUPPORTED_**.**☨**
 
-  [![GitHubRelease](https://img.shields.io/github/release/johnsonjh/gonuma.svg)](https://github.com/johnsonjh/gonuma/releases/)
+  [![GitHubRelease](https://img.shields.io/github/gridfinity/gonuma.svg)](https://github.com/gridfinity/gonuma/releases/)
 
 - **☨** Support is offered on a **best-effort** basis **ONLY**.
 
@@ -26,7 +26,7 @@ SOFTWARE.
 
   - Check "_This issue is confidential and should only be visible to team members with at least Reporter access._"
 
-  - Or, send a **PGP-encrypted** email to \<[mailto:jeff@gridfinity.com](mailto:jeff@gridfinity.com)\>
+  - Or, send a **PGP-encrypted** email to \<[jeff@gridfinity.com](mailto:jeff@gridfinity.com)\>
 
 ```text
 -----BEGIN PGP PUBLIC KEY BLOCK-----
