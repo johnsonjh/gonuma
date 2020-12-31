@@ -10,7 +10,7 @@ package gonuma_test
 import (
 	"testing"
 
-	gonuma "github.com/johnsonjh/gonuma"
+	gonuma "go.gridfinity.dev/gonuma"
 )
 
 func TestELFHash(t *testing.T) {

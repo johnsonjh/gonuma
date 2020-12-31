@@ -11,8 +11,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/johnsonjh/gonuma"
 	"github.com/stretchr/testify/require"
+	"go.gridfinity.dev/gonuma"
 )
 
 func TestBitmask(t *testing.T) {

@@ -1,4 +1,4 @@
-module github.com/johnsonjh/gonuma
+module go.gridfinity.dev/gonuma
 
 go 1.14
 

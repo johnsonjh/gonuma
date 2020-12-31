@@ -14,8 +14,8 @@ import (
 	"testing"
 	_ "unsafe"
 
-	gonuma "github.com/johnsonjh/gonuma"
 	"github.com/stretchr/testify/require"
+	gonuma "go.gridfinity.dev/gonuma"
 )
 
 func TestNotNUMAavailable(t *testing.T) {

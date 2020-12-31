@@ -7,7 +7,7 @@
 
 // +build !linux
 
-package gonuma
+package gonuma // import "go.gridfinity.dev/gonuma"
 
 import (
 	"runtime"

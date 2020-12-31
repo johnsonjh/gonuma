@@ -57,7 +57,7 @@
 package main
 
 import (
-        gonuma "github.com/johnsonjh/gonuma"
+        gonuma "go.gridfinity.dev/gonuma"
 )
 
 type object struct {

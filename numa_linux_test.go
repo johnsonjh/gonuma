@@ -14,8 +14,8 @@ import (
 	"sync"
 	"testing"
 
-	gonuma "github.com/johnsonjh/gonuma"
 	"github.com/stretchr/testify/require"
+	gonuma "go.gridfinity.dev/gonuma"
 )
 
 func TestGetNodeAndCPU2(t *testing.T) {

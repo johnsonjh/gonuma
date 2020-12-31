@@ -3,7 +3,7 @@
 // Copyright 2012 The Go Authors.
 // All rights reserved.
 
-package gonuma
+package gonuma // import "go.gridfinity.dev/gonuma"
 
 import (
 	"fmt"
