@@ -35,7 +35,8 @@
 
 ## Original Author
 
-- [lrita](https://github.com/lrita/numa) \<[lrita@163.com](mailto:lrita@163.com)\>
+- [lrita](https://github.com/lrita/numa)
+  \<[lrita@163.com](mailto:lrita@163.com)\>
 
 ## Security
 
