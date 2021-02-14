@@ -1,7 +1,7 @@
-// Copyright (c) 2021 Jeffrey H. Johnson.
 // Copyright (c) 2021 Gridfinity, LLC.
 // Copyright (c) 2019 Neal.
 // Copyright (c) 2018 lrita@163.com.
+//
 // Use of this source code is governed by the MIT
 // license that can be found in the LICENSE file.
 
@@ -51,14 +51,14 @@ const (
 	MPolLocal
 	MPolMax
 
-	// MPolFStaticNodes since Linux 2.6.26 ....
+	// MPolFStaticNodes since Linux 2.6.26 ...
 	// A nonempty nodemask specifies physical node ids. Linux does will
 	// not remap the nodemask when the process moves to a different cpuset
 	// context, nor when the set of nodes allowed by the process current
 	// cpuset context changes.
 	MPolFStaticNodes = 1 << 15
 
-	// MPolFRelativeNodes since Linux 2.6.26
+	// MPolFRelativeNodes since Linux 2.6.26 ...
 	// A nonempty nodemask specifies node ids that are relative to the set
 	// of node ids allowed by the process's current cpuset.
 	MPolFRelativeNodes = 1 << 14
@@ -255,6 +255,6 @@ func Bind(mask Bitmask) error {
 func init() {
 	// Register licensing
 	gonumaLegal.RegisterLicense(
-		"\nThe MIT License (MIT)\n\nCopyright (c) 2021 Jeffrey H. Johnson.\nCopyright (c) 2021 Gridfinity, LLC.\nCopyright (c) 2019 Neal.\nCopyright (c) 2018 lrita@163.com.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+		"\nThe MIT License (MIT)\n\nCopyright (c) 2021 Gridfinity, LLC.\nCopyright (c) 2019 Neal.\nCopyright (c) 2018 lrita@163.com.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
 	)
 }

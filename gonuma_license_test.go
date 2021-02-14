@@ -1,6 +1,6 @@
-// Copyright 2021 Jeffrey H. Johnson.
 // Copyright 2021 Gridfinity, LLC.
 // Copyright 2012 The Go Authors.
+//
 // All rights reserved.
 
 package gonuma // import "go.gridfinity.dev/gonuma"

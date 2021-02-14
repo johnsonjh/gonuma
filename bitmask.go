@@ -1,7 +1,7 @@
-// Copyright (c) 2021 Jeffrey H. Johnson.
 // Copyright (c) 2021 Gridfinity, LLC.
 // Copyright (c) 2019 Neal.
 // Copyright (c) 2018 lrita@163.com.
+//
 // Use of this source code is governed by the MIT
 // license that can be found in the LICENSE file.
 
@@ -92,10 +92,8 @@ func (b Bitmask) Clone() Bitmask {
 	return bb
 }
 
-// NewBitmask returns a bitmask, which length always rounded to a multiple
-// of
-// sizeof(uint64). The input param n represents the bit count of this
-// bitmask.
+// NewBitmask returns a bitmask with length always rounded to a multiple of
+// sizeof(uint64). The input param n represents the bit count of this bitmask.
 func NewBitmask(n int) Bitmask {
 	return make(Bitmask, (n+63)/64)
 }

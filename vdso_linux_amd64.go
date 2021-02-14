@@ -1,7 +1,7 @@
-// Copyright (c) 2021 Jeffrey H. Johnson.
 // Copyright (c) 2021 Gridfinity, LLC.
 // Copyright (c) 2019 Neal.
 // Copyright (c) 2018 lrita@163.com.
+//
 // Use of this source code is governed by the MIT
 // license that can be found in the LICENSE file.
 
@@ -61,15 +61,12 @@ const (
 	// EINIdent ...
 	EINIdent = 16
 
-	// vdsoArrayMax is the byte-size of a maximally sized array on this
-	// architecture.
-	// See cmd/compile/internal/amd64/galign.go arch.MAXWIDTH
-	// initialization.
+	// vdsoArrayMax = size of maximally sized arrays of this architecture.
+	// See cmd/compile/internal/amd64/galign.go arch.MAXWIDTH for details.
 	vdsoArrayMax = 1<<50 - 1
 
 	// Maximum indices for the array types used when traversing the vDSO ELF
-	// structures.
-	// Computed from architecture-specific max provided by vdso_linux_*.go
+	// structures from architecture-specific max provided by vdso_linux_*.go.
 
 	// VdsoSymTabSize ...
 	VdsoSymTabSize = vdsoArrayMax / unsafe.Sizeof(elfSym{})
@@ -80,8 +77,7 @@ const (
 	vdsoHashSize       = vdsoArrayMax / 4 // uint32
 
 	// vdsoBloomSizeScale is a scaling factor for gnuhash tables which are
-	// uint32 indexed,
-	// but contain uintptrs
+	// uint32 indexed, but contain uintptrs
 	vdsoBloomSizeScale = unsafe.Sizeof(uintptr(0)) / 4 // uint32
 )
 
@@ -242,7 +238,6 @@ func vdsoInitFromSysinfoEhdr(info *vdsoInfo, hdr *elfEhdr) {
 	}
 
 	// Fish out the useful bits of the dynamic table.
-
 	var hash, gnuhash *[vdsoHashSize]uint32
 	info.symstrings = nil
 	info.symtab = nil

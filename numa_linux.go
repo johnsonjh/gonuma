@@ -1,7 +1,7 @@
-// Copyright (c) 2021 Jeffrey H. Johnson.
 // Copyright (c) 2021 Gridfinity, LLC.
 // Copyright (c) 2019 Neal.
 // Copyright (c) 2018 lrita@163.com.
+//
 // Use of this source code is governed by the MIT
 // license that can be found in the LICENSE file.
 
@@ -66,12 +66,10 @@ func init() {
 //
 // If flags specifies both MPolFNode and MPolFAddr, get_mempolicy() will
 // return the node ID of the node on which the address addr is allocated
-// into
-// the location pointed to by mode. If no page has yet been allocated for
-// the
-// specified address, get_mempolicy() will allocate a page as if the process
-// had performed a read [load] access to that address, and return the ID of
-// the node where that page was allocated.
+// into the location pointed to by mode. If no page has yet been allocated for
+// the specified address, get_mempolicy() will allocate a page as if the
+// process had performed a read [load] access to that address, and return the
+// ID of the node where that page was allocated.
 //
 // If flags specifies MPolFNode, but not MPolFAddr, and the process's
 // current policy is MPolInterleave, then get_mempolicy() will return in

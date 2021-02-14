@@ -123,3 +123,4 @@ fi
 mkdir -p ./cov &&
 	mv -f ./gocov_report_gonuma* ./cov &&
 	printf '%s\n' "Done - output is located at ./cov"
+

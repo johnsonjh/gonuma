@@ -1,7 +1,7 @@
-// Copyright (c) 2021 Jeffrey H. Johnson.
 // Copyright (c) 2021 Gridfinity, LLC.
 // Copyright (c) 2019 Neal.
 // Copyright (c) 2018 lrita@163.com.
+//
 // Use of this source code is governed by the MIT
 // license that can be found in the LICENSE file.
 
@@ -69,12 +69,10 @@ func NodeMemSize64(node int) (total, free int64, err error) {
 	return 0, 0, syscall.ENOSYS
 }
 
-// MBind sets the NUMA memory policy, which consists of a policy mode and
-// zero
+// MBind sets the NUMA memory policy, which consists of a policy mode and zero
 // or more nodes, for the memory range starting with addr and continuing for
-// length bytes. The memory policy defines from which node memory is
-// allocated.
-// Details to see manpage of mbind.
+// length bytes. The policy defines from which node the memory is allocated.
+// For full details, refer to the manpage/documentation of the mbind function.
 func MBind(
 	addr unsafe.Pointer,
 	length, mode, flags int,
@@ -97,8 +95,7 @@ func SetSchedAffinity(pid int, cpumask Bitmask) error {
 	return syscall.ENOSYS
 }
 
-// GetCPUAndNode returns the node id and cpu id which current caller running
-// on.
+// GetCPUAndNode returns the node id and cpu id the caller is running on.
 func GetCPUAndNode() (cpu, node int) {
 	cpu = runtimeProcPin()
 	runtimeProcUnpin()

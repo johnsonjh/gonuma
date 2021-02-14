@@ -10,7 +10,6 @@ TEXT ·getcpu(SB), NOSPLIT|NEEDCTXT, $0-0 // this function is running g0 stack, 
 	// In particular, a kernel configured with CONFIG_OPTIMIZE_INLINING=n
 	// and hardening can use a full page of stack space in gettime_sym
 	// due to stack probes inserted to avoid stack/heap collisions.
-	//
 	// https://github.com/golang/go/issues/20427#issuecomment-343255844
 
 	MOVQ	SP, BP	        // Save old SP; BP unchanged by C code.

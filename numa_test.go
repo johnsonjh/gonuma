@@ -1,7 +1,7 @@
-// Copyright (c) 2021 Jeffrey H. Johnson.
 // Copyright (c) 2021 Gridfinity, LLC.
 // Copyright (c) 2019 Neal.
 // Copyright (c) 2018 lrita@163.com.
+//
 // Use of this source code is governed by the MIT
 // license that can be found in the LICENSE file.
 
@@ -114,9 +114,9 @@ func TestMemPolicy(t *testing.T) {
 	t.Log("nconfiguredcpu =", gonuma.NUMAconfiguredcpu)
 
 	mode, _ := gonuma.GetMemPolicy(nil, nil, 0)
-	// assert.NoError(err) // XXX(jhj): Test fails in Docker?
+	// assert.NoError(err) // XXX(jhj): Test fails in Docker?!
 	assert.True(mode >= 0 && mode < gonuma.MPolMax, "%#v", mode)
-	// assert.NoError(gonuma.SetMemPolicy(gonuma.MPolDefault, nil)) // XXX(jhj: Test fails in Docker?
+	// assert.NoError(gonuma.SetMemPolicy(gonuma.MPolDefault, nil)) // XXX(jhj): Test fails in Docker?!
 }
 
 // func TestGetMemAllowedNodeMaskAndBind(t *testing.T) {
@@ -129,7 +129,7 @@ func TestMemPolicy(t *testing.T) {
 //	} else {
 //		assert.Equal(syscall.ENOSYS, err)
 //	}
-// } // XX ^ above tests fail in Docker.
+// } // XXX(jhj): ^ above tests fail in Docker?!
 
 func TestRunOnNodeAndRunningNodesMask(t *testing.T) {
 	if !gonuma.NUMAavailable() {
@@ -175,10 +175,10 @@ func TestMBind(t *testing.T) {
 	if !gonuma.NUMAavailable() {
 		t.Skip()
 	}
-	// assert := require.New(t) // XXX Test fails in Docker?
+	// assert := require.New(t) // XXX(jhj): Test fails in Docker?!
 
 	//	assert.Equal(syscall.EINVAL,
-	//		gonuma.MBind(unsafe.Pointer(t), 100, gonuma.MPolDefault, 0, nil)) // XXX Test fails in Docker?
+	//		gonuma.MBind(unsafe.Pointer(t), 100, gonuma.MPolDefault, 0, nil)) // XXX(jhj): Test fails in Docker?!
 }
 
 func TestGetNodeAndCPU(t *testing.T) {

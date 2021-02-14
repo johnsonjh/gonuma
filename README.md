@@ -30,7 +30,6 @@
 ### Source Code
 
 - [Gridfinity GitLab](https://gitlab.gridfinity.com/go/gonuma)
-- [SourceHut](https://sr.ht/~trn/gonuma)
 - [GitHub](https://github.com/gridfinity/gonuma)
 
 ## Original Author
@@ -45,7 +44,7 @@
 ## Coverage Reports
 
 - [GoCov](https://pktdist.gridfinity.com/coverage/gonuma/)
-- [Coveralls](https://coveralls.io/github/johnsonjh/gonuma)
+- [Coveralls](https://coveralls.io/github/gridfinity/gonuma)
 
 ## License
 
@@ -73,3 +72,4 @@ func fnxxxx() {
         objects[cpu].X = xx
 }
 ```
+
