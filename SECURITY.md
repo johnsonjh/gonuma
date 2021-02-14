@@ -22,6 +22,8 @@ SOFTWARE.
 
 ## Report a security vulnerability
 
-- Create a new issue at [Gridfinity GitLab](https://gitlab.gridfinity.com/go/gonuma/-/issues)
+- Create a new issue at
+  [Gridfinity GitLab](https://gitlab.gridfinity.com/go/gonuma/-/issues)
 
-  - Check "_This issue is confidential and should only be visible to team members with at least Reporter access._"
+  - Check "_This issue is confidential and should only be visible to team
+    members with at least Reporter access._"
