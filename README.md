@@ -72,4 +72,3 @@ func fnxxxx() {
         objects[cpu].X = xx
 }
 ```
-
