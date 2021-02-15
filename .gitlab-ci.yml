@@ -114,8 +114,8 @@ macos job:
     script:
     - | 
         # update tools
-        bash --norc --noprofile --posix -c "brew update"
-        bash --norc --noprofile --posix -c "brew upgrade"
+        bash --norc --noprofile --posix -c "brew update || true" || true 
+        bash --norc --noprofile --posix -c "brew upgrade || true" || true
     - *scriptCommon
     - if type brew >/dev/null 2>&1; then export HOMEBREW_PREFIX=$(brew --prefix 2>/dev/null); for dir in ${HOMEBREW_PREFIX:?}/opt/*/libexec/gnubin; do export PATH="${dir:?}:${PATH:?}"; done; fi
     - export PATH="/usr/local/opt/gcc/bin:${PATH:?}"
