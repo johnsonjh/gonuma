@@ -6,6 +6,7 @@
 // Use of this source code is governed by the MIT
 // license that can be found in the LICENSE file.
 
+//go:build linux
 // +build linux
 
 package gonuma_test
@@ -15,8 +16,8 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/stretchr/testify/require"
 	gonuma "github.com/johnsonjh/gonuma"
+	"github.com/stretchr/testify/require"
 )
 
 func TestGetNodeAndCPU2(t *testing.T) {

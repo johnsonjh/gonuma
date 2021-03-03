@@ -15,8 +15,8 @@ import (
 	"testing"
 	_ "unsafe"
 
-	"github.com/stretchr/testify/require"
 	gonuma "github.com/johnsonjh/gonuma"
+	"github.com/stretchr/testify/require"
 )
 
 func TestNotNUMAavailable(t *testing.T) {

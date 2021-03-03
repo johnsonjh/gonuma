@@ -12,8 +12,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/stretchr/testify/require"
 	"github.com/johnsonjh/gonuma"
+	"github.com/stretchr/testify/require"
 )
 
 func TestBitmask(t *testing.T) {
