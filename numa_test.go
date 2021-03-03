@@ -1,6 +1,7 @@
-// Copyright (c) 2021 Gridfinity, LLC.
-// Copyright (c) 2019 Neal.
-// Copyright (c) 2018 lrita@163.com.
+// Copyright © 2021 Jeffrey H. Johnson <trnsz@pobox.com>
+// Copyright © 2021 Gridfinity, LLC.
+// Copyright © 2019 Neal.
+// Copyright © 2018 lrita@163.com.
 //
 // Use of this source code is governed by the MIT
 // license that can be found in the LICENSE file.
@@ -15,7 +16,7 @@ import (
 	_ "unsafe"
 
 	"github.com/stretchr/testify/require"
-	gonuma "go.gridfinity.dev/gonuma"
+	gonuma "github.com/johnsonjh/gonuma"
 )
 
 func TestNotNUMAavailable(t *testing.T) {

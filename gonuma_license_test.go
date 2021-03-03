@@ -1,15 +1,16 @@
-// Copyright 2021 Gridfinity, LLC.
-// Copyright 2012 The Go Authors.
+// Copyright © 2021 Jeffrey H. Johnson <trnsz@pobox.com>
+// Copyright © 2021 Gridfinity, LLC.
+// Copyright © 2012 The Go Authors.
 //
 // All rights reserved.
 
-package gonuma // import "go.gridfinity.dev/gonuma"
+package gonuma
 
 import (
 	"fmt"
 	"testing"
 
-	u "go.gridfinity.dev/leaktestfe"
+	u "github.com/johnsonjh/leaktestfe"
 	licn "go4.org/legal"
 )
 

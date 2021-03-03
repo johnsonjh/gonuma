@@ -1,3 +1,5 @@
+// Copyright © 2021 Jeffrey H. Johnson <trnsz@pobox.com>
+// Copyright © 2017-2020 The Go Authors.
 #include "textflag.h"
 
 // long vdsoGetCPU(unsigned *, unsigned *, void *)
