@@ -38,15 +38,18 @@ import (
 )
 
 type object struct {
-        X int
-        _ [...]byte // pad to page size
+		X int
+		_ [...]byte // pad to page size
 }
 
-var objects = make([]object, gonuma.CPUCount())
+var objects = make(
+		[]object,
+		gonuma.CPUCount(),
+)
 
 func fnxxxx() {
-        cpu, node := gonuma.GetCPUAndNode()
-        objects[cpu].X = xx
+		cpu, node := gonuma.GetCPUAndNode()
+		objects[cpu].X = xx
 }
 ```
 
