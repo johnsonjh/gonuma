@@ -1,17 +1,32 @@
 # gonuma
 
+----
+
 `gonuma` is a Go utility library for writing NUMA-aware applications
 
----
+----
+
+## Availability
+
+- [GitHub](https://github.com/johnsonjh/gonuma)
+- [GitLab](https://gitlab.com/johnsonjh/gonuma)
+- [SourceHut](https://sr.ht/~trn/gonuma)
+- [NotABug](https://notabug.org/trn/gonuma)
+
+----
 
 ## Original Author
 
 - [lrita](https://github.com/lrita/numa)
   \<[lrita@163.com](mailto:lrita@163.com)\>
 
+----
+
 ## License
 
 - [MIT License](https://tldrlegal.com/license/mit-license)
+
+----
 
 ## Usage
 
@@ -34,3 +49,5 @@ func fnxxxx() {
         objects[cpu].X = xx
 }
 ```
+
+----
