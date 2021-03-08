@@ -60,8 +60,8 @@ github.com/hashicorp/golang-lru v0.5.1/go.mod h1:/m3WP610KZHVQ1SGc6re/UDhFvYD7pJ
 github.com/ianlancetaylor/demangle v0.0.0-20181102032728-5e5cf60278f6/go.mod h1:aSSvb/t6k1mPoxDqO4vJh6VOCGPwU4O0C2/Eqndh1Sc=
 github.com/intel-go/cpuid v0.0.0-20200819041909-2aa72927c3e2 h1:h+RKaNPjka7LRJGoeub/IQBdXSoEaJjfADkBq02hvjw=
 github.com/intel-go/cpuid v0.0.0-20200819041909-2aa72927c3e2/go.mod h1:RmeVYf9XrPRbRc3XIx0gLYA8qOFvNoPOfaEZduRlEp4=
-github.com/johnsonjh/leaktestfe v0.0.0-20210303125113-7763ec4f9649 h1:ZBYRW2Mb4kLPWS2LNLTWHdEWZHzWjIc+Q7Sg9gXUho8=
-github.com/johnsonjh/leaktestfe v0.0.0-20210303125113-7763ec4f9649/go.mod h1:7L3ArOA0vQEr9QcLqNfBDhThOGbnlEIFpIl/iNjxSsE=
+github.com/johnsonjh/leaktestfe v0.0.0-20210305084125-5614f292a6aa h1:gHeaUFZ1Df3oPBJEXiruIZXw/B0IMidnKH/uaOErGaA=
+github.com/johnsonjh/leaktestfe v0.0.0-20210305084125-5614f292a6aa/go.mod h1:7L3ArOA0vQEr9QcLqNfBDhThOGbnlEIFpIl/iNjxSsE=
 github.com/jstemmer/go-junit-report v0.0.0-20190106144839-af01ea7f8024/go.mod h1:6v2b51hI/fHJwM22ozAgKL4VKDeJcHhJFhtBdhmNjmU=
 github.com/jstemmer/go-junit-report v0.9.1/go.mod h1:Brl9GWCQeLvo8nXZwPNNblvFj/XSXhF0NWZEnDohbsk=
 github.com/kisielk/gotool v1.0.0/go.mod h1:XhKaO+MFFWcvkIS/tQcRk01m1F5IRFswLeQ+oQHNcck=
